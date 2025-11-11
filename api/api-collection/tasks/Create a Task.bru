@@ -1,0 +1,23 @@
+meta {
+  name: Create a Task
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/tasks
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Prepare for dinner",
+    "description": "Cook beef stew"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
